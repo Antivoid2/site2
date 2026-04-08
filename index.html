@@ -57,57 +57,49 @@
     }
 
     /* 🔥 아이콘 정렬 */
-    .icon-row {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
+    <style>
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 
-    .icon-box {
-      display: inline-block;
-      padding: 15px;
-      border: 2px solid purple;
-      border-radius: 15px;
+  .icon-box {
+    display: inline-block;
+    padding: 15px;
+    border: 2px solid purple;
+    border-radius: 15px;
 
-      background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
 
-      box-shadow: 0 0 20px purple;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
+    box-shadow: 0 0 20px purple;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
 
-    .icon-box:hover {
-      box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
-      transform: scale(1.1);
-    }
+  .icon-box:hover {
+    box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
+    transform: scale(1.1);
+  }
 
-    .icon {
-      width: 60px;
-      height: auto;
-      filter: drop-shadow(0 0 10px purple);
-      transition: all 0.3s ease;
-    }
+  .icon {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0 0 10px purple);
+    transition: all 0.3s ease;
+  }
 
-    .icon-box:hover .icon {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 25px violet);
-    }
+  .icon-box:hover .icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 25px violet);
+  }
 
-    .footer {
-      margin-top: 30px;
-      font-size: 12px;
-      opacity: 0.5;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <div class="box">
-    <h1>Antivoid</h1>
-    <p class="subtitle">Enter the void</p>
+  /* 유튜브 로고 살짝 내리기 */
+  .youtube-icon {
+    transform: translateY(3px);
+  }
+</style>
 
 <div class="icon-row">
 
@@ -123,10 +115,9 @@
 
   <!-- 유튜브 -->
   <a href="https://www.youtube.com/@XxAntivoidxX" target="_blank" class="icon-box">
-    <img src="youtube.png" class="icon">
+    <img src="youtube.png" class="icon youtube-icon">
   </a>
 
 </div>
-
 </body>
 </html>
