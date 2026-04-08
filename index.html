@@ -36,19 +36,22 @@
       text-shadow: 0 0 10px purple;
     }
 
-    /* 로고 박스 */
+    /* 🔥 로고 박스 (더 확실하게 어둡게) */
     .logo-box {
       display: inline-block;
       padding: 20px;
       border: 2px solid purple;
       border-radius: 15px;
-      background: rgba(0,0,0,0.6); /* 여기만 어둡게 */
-      box-shadow: 0 0 15px purple;
+
+      background-color: rgba(0, 0, 0, 0.8); /* 더 진하게 */
+      backdrop-filter: blur(5px); /* 살짝 흐림 효과 (간지) */
+
+      box-shadow: 0 0 20px purple;
       transition: 0.3s;
     }
 
     .logo-box:hover {
-      box-shadow: 0 0 30px violet;
+      box-shadow: 0 0 40px violet;
       transform: scale(1.05);
     }
 
