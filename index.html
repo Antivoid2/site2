@@ -46,9 +46,26 @@
       text-shadow: 0 0 10px purple;
     }
 
+    /* 로고 박스 */
+    .logo-box {
+      display: inline-block;
+      padding: 20px;
+      border: 2px solid purple;
+      border-radius: 15px;
+      background: rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px purple;
+      transition: 0.3s;
+    }
+
+    .logo-box:hover {
+      box-shadow: 0 0 30px violet;
+      transform: scale(1.05);
+    }
+
     /* 로고 */
     .logo {
-      width: 150px;
+      width: 75px;
+      height: auto;
       cursor: pointer;
       transition: 0.3s;
       filter: drop-shadow(0 0 10px purple);
@@ -68,9 +85,11 @@
   <div class="box">
     <h1>Antivoid</h1>
 
-    <!-- 로고 클릭 시 로블록스 이동 -->
+    <!-- 로블록스 프로필 이동 -->
     <a href="https://www.roblox.com/users/4348809472/profile" target="_blank">
-      <img src="roblox2.png" class="logo">
+      <div class="logo-box">
+        <img src="roblox2.png" class="logo">
+      </div>
     </a>
 
   </div>
