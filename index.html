@@ -12,16 +12,6 @@
       color: white;
     }
 
-    /* 어두운 오버레이 */
-    .overlay {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.75);
-      top: 0;
-      left: 0;
-    }
-
     /* 중앙 UI 박스 */
     .box {
       position: absolute;
@@ -32,11 +22,11 @@
       padding: 60px;
       width: 400px;
       
-      background: rgba(0,0,0,0.6);
+      background: transparent;
       border: 2px solid purple;
       border-radius: 20px;
       
-      box-shadow: 0 0 20px purple, 0 0 60px rgba(128,0,128,0.5);
+      box-shadow: 0 0 20px purple;
       text-align: center;
     }
 
@@ -52,7 +42,7 @@
       padding: 20px;
       border: 2px solid purple;
       border-radius: 15px;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6); /* 여기만 어둡게 */
       box-shadow: 0 0 15px purple;
       transition: 0.3s;
     }
@@ -80,12 +70,10 @@
 </head>
 
 <body>
-  <div class="overlay"></div>
 
   <div class="box">
     <h1>Antivoid</h1>
 
-    <!-- 로블록스 프로필 이동 -->
     <a href="https://www.roblox.com/users/4348809472/profile" target="_blank">
       <div class="logo-box">
         <img src="roblox2.png" class="logo">
