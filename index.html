@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anti's RNG</title>
+  <title>Antivoid</title>
   <style>
     body {
       margin: 0;
@@ -10,52 +10,64 @@
       background-size: cover;
       font-family: Arial;
       color: white;
-      overflow: hidden;
     }
 
+    /* 어두운 필터 */
     .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      position: absolute;
+      position: fixed;
       width: 100%;
       height: 100%;
+      background: rgba(0,0,0,0.75);
       top: 0;
       left: 0;
     }
 
-    .container {
-      position: relative;
-      z-index: 2;
-      text-align: center;
+    /* 중앙 박스 */
+    .box {
+      position: absolute;
       top: 50%;
-      transform: translateY(-50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+      padding: 50px;
+      width: 400px;
+      
+      background: rgba(0,0,0,0.6);
+      border: 2px solid purple;
+      border-radius: 20px;
+      
+      box-shadow: 0 0 20px purple, 0 0 60px rgba(128,0,128,0.5);
+      text-align: center;
     }
 
     h1 {
-      font-size: 60px;
-      text-shadow: 0 0 20px purple, 0 0 40px violet;
+      font-size: 40px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px purple;
     }
 
     p {
-      font-size: 20px;
       opacity: 0.8;
+      margin-bottom: 30px;
     }
 
+    /* 버튼 */
     .btn {
-      margin-top: 30px;
-      padding: 15px 40px;
-      font-size: 18px;
-      border: none;
-      border-radius: 30px;
-      background: linear-gradient(45deg, purple, violet);
+      display: block;
+      margin: 10px auto;
+      padding: 12px;
+      width: 80%;
+      border-radius: 10px;
+      border: 2px solid purple;
+      background: transparent;
       color: white;
       cursor: pointer;
       transition: 0.3s;
-      box-shadow: 0 0 15px purple;
     }
 
     .btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px violet;
+      background: purple;
+      box-shadow: 0 0 20px purple;
     }
   </style>
 </head>
@@ -63,13 +75,13 @@
 <body>
   <div class="overlay"></div>
 
-  <div class="container">
-    <h1>⚡ Anti's RNG ⚡</h1>
-    <p>디스코드 봇 소개 사이트</p>
+  <div class="box">
+    <h1>Antivoid</h1>
+    <p>Welcome to my personal website</p>
 
-    <button class="btn" onclick="window.location.href='https://discord.com'">
-      디스코드 초대
-    </button>
+    <button class="btn">About Me</button>
+    <button class="btn">Projects</button>
+    <button class="btn">Contact</button>
   </div>
 </body>
 </html>
