@@ -13,7 +13,6 @@
       color: white;
     }
 
-    /* 중앙 박스 */
     .box {
       position: absolute;
       top: 50%;
@@ -21,7 +20,7 @@
       transform: translate(-50%, -50%);
       
       padding: 60px;
-      width: 400px;
+      width: 460px;
       
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(12px);
@@ -35,7 +34,6 @@
       transition: all 0.3s ease;
     }
 
-    /* 🔥 박스 hover */
     .box:hover {
       box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
       transform: translate(-50%, -50%) scale(1.02);
@@ -43,29 +41,35 @@
 
     h1 {
       font-size: 40px;
-      margin-bottom: 20px;
-
+      margin-bottom: 10px;
       animation: glow 2s infinite alternate;
     }
 
-    /* 제목 빛나는 애니메이션 */
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px purple;
-      }
-      to {
-        text-shadow: 0 0 30px violet;
-      }
+    .subtitle {
+      opacity: 0.7;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
     }
 
-    /* 로고 버튼 (a 자체를 박스로) */
-    .logo-box {
+    @keyframes glow {
+      from { text-shadow: 0 0 10px purple; }
+      to { text-shadow: 0 0 30px violet; }
+    }
+
+    /* 🔥 아이콘 정렬 */
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icon-box {
       display: inline-block;
-      padding: 20px;
+      padding: 15px;
       border: 2px solid purple;
       border-radius: 15px;
 
-      background-color: rgba(0, 0, 0, 0.8);
+      background-color: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(5px);
 
       box-shadow: 0 0 20px purple;
@@ -73,24 +77,27 @@
       text-decoration: none;
     }
 
-    /* 🔥 hover */
-    .logo-box:hover {
+    .icon-box:hover {
       box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
 
-    /* 로고 이미지 */
-    .logo {
-      width: 75px;
+    .icon {
+      width: 60px;
       height: auto;
-
       filter: drop-shadow(0 0 10px purple);
       transition: all 0.3s ease;
     }
 
-    .logo-box:hover .logo {
+    .icon-box:hover .icon {
       transform: scale(1.1);
       filter: drop-shadow(0 0 25px violet);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      opacity: 0.5;
     }
 
   </style>
@@ -100,12 +107,26 @@
 
   <div class="box">
     <h1>Antivoid</h1>
+    <p class="subtitle">Enter the void</p>
 
-    <a href="https://www.roblox.com/users/4348809472/profile" target="_blank" class="logo-box">
-      <img src="roblox2.png" class="logo">
-    </a>
+<div class="icon-row">
 
-  </div>
+  <!-- 로블록스 -->
+  <a href="https://www.roblox.com/users/4348809472/profile" target="_blank" class="icon-box">
+    <img src="roblox2.png" class="icon">
+  </a>
+
+  <!-- 디스코드 -->
+  <a href="https://discord.com/users/1341217194356244564" target="_blank" class="icon-box">
+    <img src="discord2.png" class="icon">
+  </a>
+
+  <!-- 유튜브 -->
+  <a href="https://www.youtube.com/@XxAntivoidxX" target="_blank" class="icon-box">
+    <img src="youtube.png" class="icon">
+  </a>
+
+</div>
 
 </body>
 </html>
