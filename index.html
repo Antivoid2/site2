@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Anti Bot</title>
+  <title>Anti's RNG</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       background: url('background.png.png') no-repeat center center fixed;
       background-size: cover;
-      color: white;
-      text-align: center;
       font-family: Arial;
+      color: white;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     h1 {
-      font-size: 50px;
-      margin-top: 100px;
-      text-shadow: 0 0 20px purple;
+      font-size: 60px;
+      text-shadow: 0 0 20px purple, 0 0 40px violet;
+    }
+
+    p {
+      font-size: 20px;
+      opacity: 0.8;
     }
 
     .btn {
-      background: purple;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
       margin-top: 30px;
+      padding: 15px 40px;
       font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, purple, violet);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px purple;
     }
 
     .btn:hover {
-      background: violet;
+      transform: scale(1.1);
+      box-shadow: 0 0 30px violet;
     }
   </style>
 </head>
 
 <body>
-  <h1>🔥 Anti's RNG 🔥</h1>
-  <p>디스코드 봇 소개 사이트</p>
+  <div class="overlay"></div>
 
-  <button class="btn">디스코드 초대</button>
+  <div class="container">
+    <h1>⚡ Anti's RNG ⚡</h1>
+    <p>디스코드 봇 소개 사이트</p>
+
+    <button class="btn" onclick="window.location.href='https://discord.com'">
+      디스코드 초대
+    </button>
+  </div>
 </body>
 </html>
