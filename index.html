@@ -2,17 +2,18 @@
 <html>
 <head>
   <title>Antivoid</title>
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: url('background.png.png') no-repeat center center fixed;
+      background: url('./background.png.png') no-repeat center center fixed;
       background-size: cover;
-      font-family: Arial;
+      font-family: 'Segoe UI', Arial, sans-serif;
       color: white;
     }
 
-    /* 중앙 UI 박스 */
+    /* 중앙 박스 */
     .box {
       position: absolute;
       top: 50%;
@@ -22,49 +23,72 @@
       padding: 60px;
       width: 400px;
       
-      background: transparent;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+
       border: 2px solid purple;
       border-radius: 20px;
       
-      box-shadow: 0 0 20px purple;
+      box-shadow: 0 0 25px purple, 0 0 50px rgba(128, 0, 128, 0.5);
       text-align: center;
+
+      transition: all 0.3s ease;
+    }
+
+    /* 🔥 박스 hover */
+    .box:hover {
+      box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
+      transform: translate(-50%, -50%) scale(1.02);
     }
 
     h1 {
       font-size: 40px;
       margin-bottom: 20px;
-      text-shadow: 0 0 10px purple;
+
+      animation: glow 2s infinite alternate;
     }
 
-    /* 🔥 로고 박스 (더 확실하게 어둡게) */
+    /* 제목 빛나는 애니메이션 */
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px purple;
+      }
+      to {
+        text-shadow: 0 0 30px violet;
+      }
+    }
+
+    /* 로고 버튼 (a 자체를 박스로) */
     .logo-box {
       display: inline-block;
       padding: 20px;
       border: 2px solid purple;
       border-radius: 15px;
 
-      background-color: rgba(0, 0, 0, 0.8); /* 더 진하게 */
-      backdrop-filter: blur(5px); /* 살짝 흐림 효과 (간지) */
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
 
       box-shadow: 0 0 20px purple;
-      transition: 0.3s;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
 
+    /* 🔥 hover */
     .logo-box:hover {
-      box-shadow: 0 0 40px violet;
-      transform: scale(1.05);
+      box-shadow: 0 0 40px violet, 0 0 80px rgba(138, 43, 226, 0.7);
+      transform: scale(1.08);
     }
 
-    /* 로고 */
+    /* 로고 이미지 */
     .logo {
       width: 75px;
       height: auto;
-      cursor: pointer;
-      transition: 0.3s;
+
       filter: drop-shadow(0 0 10px purple);
+      transition: all 0.3s ease;
     }
 
-    .logo:hover {
+    .logo-box:hover .logo {
       transform: scale(1.1);
       filter: drop-shadow(0 0 25px violet);
     }
@@ -77,12 +101,11 @@
   <div class="box">
     <h1>Antivoid</h1>
 
-    <a href="https://www.roblox.com/users/4348809472/profile" target="_blank">
-      <div class="logo-box">
-        <img src="roblox2.png" class="logo">
-      </div>
+    <a href="https://www.roblox.com/users/4348809472/profile" target="_blank" class="logo-box">
+      <img src="roblox2.png" class="logo">
     </a>
 
   </div>
+
 </body>
 </html>
